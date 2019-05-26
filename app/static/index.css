@@ -6,7 +6,6 @@ url("https://fonts.googleapis.com/css?family=Economica:300,400,700,900");
 
 body{
     text-align: center;
-    background-image: url("static/flower.jpeg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,7 +15,6 @@ body{
 }
 h1{
     float: right;
-    color: white;
 }
 h2{
     text-align: center;
@@ -63,7 +61,6 @@ p {
     font-size: 20px;
     opacity: 0.9;
     filter: alpha(opacity=50);
-    color:  white; 
 
 }
 .heading{
@@ -72,7 +69,6 @@ p {
 }
 h1{
     font-size: 60px;
-    color: white;
     font-family:'Raleway',san-serif;
 }
 p{
@@ -81,10 +77,8 @@ p{
     font-family:'Economica',san-serif;
 }
 body{
-    background-image: url("flower.jpeg");
     background-size: cover;
     opacity: 0.8;
-    color:white;
     height: 100vh;
 }
 footer{
@@ -107,13 +101,11 @@ padding: .5em 1.75em;
 margin-top: 200px;
 }
 .button-accent{
-color: white;
 border-color: white;
 }
 .button-accent:hover,
 .button-accent:focus{
 background:gray;
-color: white;
 }
 .row2{
     float: right;

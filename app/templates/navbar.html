@@ -16,7 +16,7 @@
          <ul class="nav navbar-nav navbar-right">
              {% if current_user.is_authenticated %}
              <li><a href="{{url_for('main.profile',uname=current_user.username)}}" class="user"style="color:white; font-weight:bolder;"><span class="glyphicon glyphicon-user"></span> &nbsp;{{current_user.username}}</a></li>
-             <li><a href="{{url_for('auth.logout')}}" class="user"style="color:white; font-weight:bolder;" class="logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Log out</a></li>
+             <li><a href="{{url_for('auth.logout')}}" class="user" font-weight:bolder;" class="logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;Log out</a></li>
              {% else %}
              <li><a href="{{url_for('auth.login')}}" class="login"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Log in</a></li>
              {% endif %}
@@ -31,7 +31,6 @@
         transform: translateY(-7px);
         opacity: 0.9;
         filter: alpha(opacity=50);
-        color:  white; 
         font-weight: bolder;
     }
 </style>
