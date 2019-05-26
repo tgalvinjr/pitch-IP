@@ -38,7 +38,7 @@ To start using this project use the following commands:
 
 * `git clone https://github.com/tgalvinjr/pitch-ip`
 * `cd pitch-ip`
-* `code . `(this is if Visual Studio Code is your preferred text editor)
+* `code . `(run this command if Visual Studio Code is your preferred text editor)
 
 To run this program
 * run this commands in your terminal:
@@ -47,7 +47,7 @@ To run this program
 * access the application on this localhost address `http://127.0.0.1:5000`
 
 ## Github Pages
-    The UI templates can be tested on [github pages](https://tgalvinjr.github.io/pitch-ip/)
+    The UI templates can be tested on [Heroku](https://pitch-ip-alvin.herokuapp.com/)
 
 ## Prerequisites
 You need the following to work on the project:
