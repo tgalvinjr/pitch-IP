@@ -1,6 +1,5 @@
-#!/bin/sh
-'''exec' "/home/alvin/Desktop/Moringa_Projects/Independent Projects/pitch-ip/virtual/bin/python" "$0" "$@"
-' '''
+#!/home/kevine/Desktop/pythonFiles/pitch-app/virtual/bin/python
+
 # -*- coding: utf-8 -*-
 import re
 import sys

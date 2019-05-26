@@ -37,3 +37,44 @@ class User(UserMixin,db.Model):
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+
+class Role(db.Model):
+    __tablename__ = 'roles'
+
+    id = db.Column(db.Integer,primary_key = True)
+    name = db.Column(db.String(255))
+    users = db.relationship('User',backref = 'role',lazy="dynamic")
+
+
+    def __repr__(self):
+        return f'User {self.name}'
+
+class Pitch(db.Model):
+    __tablename__ = 'pitches'
+
+    id = db.Column(db.Integer,primary_key = True)
+    pitch_title = db.Column(db.String)
+    pitch_content = db.Column(db.String(1000))
+    category = db.Column(db.String)
+    posted = db.Column(db.DateTime,default=datetime.utcnow)
+    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
+    likes = db.Column(db.Integer)
+    dislikes = db.Column(db.Integer)
+
+    comments = db.relationship('Comment',backref =  'pitch_id',lazy = "dynamic")
+class Comment(db.Model):
+    __tablename__ = 'comments'
+
+    id = db.Column(db.Integer,primary_key = True)
+    comment = db.Column(db.String(1000))
+    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
+    pitch = db.Column(db.Integer,db.ForeignKey("pitches.id"))
+
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def get_comments(cls,pitch):
+        comments = Comment.query.filter_by(pitch_id=pitch).all()
+        return comments
