@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"> </div>
+        <div class="col-md-8">
+            <!--Flash message -->
+            {% for message in get_flashed_messages() %}
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+            {% endfor %}
+            <!-- Login form -->
+            {{wtf.quick_form(login_form)}}
+            <p> Don't have an account? <a href="{{url_for('auth.register')}}">Sign up here</a></p>
+        </div>
+        <div clas="col-md-2"> </div>
+    </div>
+</div>
+<style>
+        body{
+            background-image: url("https://b.kisscc0.com/20180517/ajw/kisscc0-desktop-wallpaper-4k-resolution-high-definition-te-nature-5afd559f208de6.9913836915265519671334.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-weight: bolder;
+        }
+    </style>
+{% endblock%}

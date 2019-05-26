@@ -1,5 +1,6 @@
-#!/home/kevine/Desktop/pythonFiles/pitch-app/virtual/bin/python
-
+#!/bin/sh
+'''exec' "/home/alvin/Desktop/Moringa_Projects/Independent Projects/pitch-ip/virtual/bin/python" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys
